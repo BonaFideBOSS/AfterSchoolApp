@@ -1,0 +1,40 @@
+@import './base.css';
+
+.navbar img {
+  width: 48px;
+  height: 48px;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.lesson-image {
+  transition: transform .3s ease-in-out;
+}
+
+.lesson-card:hover .lesson-image {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.placeholder .card {
+  z-index: -1;
+}
+
+.table tbody tr td:first-of-type,
+.table tbody tr td:last-of-type {
+  width: 0;
+}
+
+@media (max-width: 587px) {
+  .notification {
+    width: 70%;
+  }
+}
+
+@media (max-width: 419px) {
+  .notification {
+    width: 80%;
+  }
+}

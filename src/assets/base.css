@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
+
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+*:focus-visible,
+*:focus,
+.form-select {
+  box-shadow: none !important;
+}
+
+.input-group .form-notch>* {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.select-wrapper {
+  width: 100%;
+}
+
+.fw-bolder {
+  font-weight: 900 !important;
+}
+
+.text-red {
+  --mdb-text-opacity: 1;
+  color: rgba(220, 53, 69, var(--mdb-text-opacity)) !important;
+}
+
+.bg-red {
+  --mdb-bg-opacity: 1;
+  background-color: rgba(220, 53, 69, var(--mdb-bg-opacity)) !important;
+}
+
+.text-purple {
+  --mdb-text-opacity: 1;
+  color: rgba(111, 66, 193, var(--mdb-text-opacity)) !important;
+}
+
+.bg-purple {
+  --mdb-bg-opacity: 1;
+  background-color: rgba(111, 66, 193, var(--mdb-bg-opacity)) !important;
+}
+
+.text-indigo {
+  --mdb-text-opacity: 1;
+  color: rgba(102, 16, 242, var(--mdb-text-opacity)) !important;
+}
+
+.bg-indigo {
+  --mdb-bg-opacity: 1;
+  background-color: rgba(102, 16, 242, var(--mdb-bg-opacity)) !important;
+}
+
+.text-orange {
+  --mdb-text-opacity: 1;
+  color: rgba(253, 126, 20, var(--mdb-text-opacity)) !important;
+}
+
+.bg-orange {
+  --mdb-bg-opacity: 1;
+  background-color: rgba(253, 126, 20, var(--mdb-bg-opacity)) !important;
+}
+
+.text-pink {
+  --mdb-text-opacity: 1;
+  color: rgba(214, 51, 132, var(--mdb-text-opacity)) !important;
+}
+
+.bg-pink {
+  --mdb-bg-opacity: 1;
+  background-color: rgba(214, 51, 132, var(--mdb-bg-opacity)) !important;
+}
+
+.text-green {
+  --mdb-text-opacity: 1;
+  color: rgba(35, 189, 25, var(--mdb-text-opacity)) !important;
+}
+
+.bg-green {
+  --mdb-bg-opacity: 1;
+  background-color: rgba(35, 189, 25, var(--mdb-bg-opacity)) !important;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  pointer-events: all;
+}
+
+body:has(.sidenav-backdrop) {
+  overflow: hidden;
+}
