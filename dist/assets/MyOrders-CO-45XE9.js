@@ -1,1 +1,0 @@
-import{_ as e,c as s,o,a as t}from"./index-BvlWk3Oi.js";const r={},c=t("h1",null,"My Orders",-1),n=[c];function a(_,d,l,p,i,f){return o(),s("main",null,n)}const m=e(r,[["render",a]]);export{m as default};
