@@ -8,31 +8,43 @@ const router = createRouter({
       path: "/",
       name: "lessons",
       component: Lessons,
-      title: "Home",
+      meta: { title: "Home" },
       titleShort: "Home",
       icon: "fa-duotone fa-house",
+      show: true,
     },
     {
       path: "/cart",
       name: "cart",
       component: () => import("@/views/Cart.vue"),
-      title: "My Cart",
+      meta: { title: "My Cart" },
       titleShort: "Cart",
       icon: "fa-duotone fa-cart-shopping",
+      show: true,
     },
     {
       path: "/myorders",
       name: "myorders",
       component: () => import("@/views/MyOrders.vue"),
-      title: "My Orders",
+      meta: { title: "My Orders" },
       titleShort: "Orders",
       icon: "fa-duotone fa-clock-rotate-left",
+      show: true,
+    },
+    {
+      path: "/:catchAll(.*)",
+      name: "error",
+      component: () => import("@/views/NotFound.vue"),
+      meta: { title: "Page Not Found" },
+      titleShort: "404",
+      icon: "fa-duotone fa-clock-rotate-left",
+      show: false,
     },
   ],
 });
 
 router.beforeEach((to, from, next) => {
-  var title = to.title ? ` - ${to.title}` : "";
+  var title = to.meta.title ? ` - ${to.meta.title}` : "";
   document.title = `AfterSchool${title}` || "AfterSchool";
   next();
 });

@@ -1,11 +1,11 @@
 <template>
   <template v-if="!mobile">
-    <RouterLink v-for="route in $router.options.routes" :to="route.path" activeClass="active" :text="route.title"
+    <RouterLink v-for="route in routes" :to="route.path" activeClass="active" :text="route.meta.title"
       class="nav-link" />
     <a class="nav-link" :href="serverURL" target="_blank">Administrator</a>
   </template>
   <ul v-else class="nav nav-pills nav-justified gap-0 m-0 flex-nowrap">
-    <li class="nav-item" v-for="route in $router.options.routes">
+    <li class="nav-item" v-for="route in routes">
       <RouterLink :to="route.path" activeClass="" class="py-3 nav-link m-0 rounded-0 bg-transparent" data-mdb-pill-init>
         <div class="d-flex flex-column gap-3 align-items-center">
           <span class="btn btn-lg btn-floating position-relative"
@@ -31,6 +31,7 @@ export default {
   props: ['mobile'],
   data() {
     return {
+      routes: this.$router.options.routes.filter(r => r.show === true),
       serverURL: this.$root.serverURL,
       cart: this.$root.cart
     }
