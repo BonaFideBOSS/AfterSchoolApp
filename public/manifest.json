@@ -9,13 +9,18 @@
       "type": "image/png"
     },
     {
+      "src": "img/logo-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
       "src": "img/logo-192.png",
       "sizes": "192x192",
       "type": "image/png"
     }
   ],
-  "id": "index.html",
-  "start_url": "index.html",
+  "id": "/",
+  "start_url": "/",
   "display": "fullscreen",
   "background_color": "#fff",
   "screenshots": [
@@ -26,9 +31,45 @@
       "form_factor": "wide"
     },
     {
+      "src": "img/desktop-2.png",
+      "type": "image/png",
+      "sizes": "1366x768",
+      "form_factor": "wide"
+    },
+    {
+      "src": "img/desktop-3.png",
+      "type": "image/png",
+      "sizes": "1366x768",
+      "form_factor": "wide"
+    },
+    {
+      "src": "img/desktop-4.png",
+      "type": "image/png",
+      "sizes": "1366x768",
+      "form_factor": "wide"
+    },
+    {
       "src": "img/mobile.png",
       "type": "image/png",
-      "sizes": "1442x3202",
+      "sizes": "1290x2796",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "img/mobile-2.png",
+      "type": "image/png",
+      "sizes": "1290x2796",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "img/mobile-3.png",
+      "type": "image/png",
+      "sizes": "1290x2796",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "img/mobile-4.png",
+      "type": "image/png",
+      "sizes": "1290x2796",
       "form_factor": "narrow"
     }
   ]
