@@ -50,3 +50,7 @@ export function debounce(func, delay = 300) {
     timer = setTimeout(() => func.apply(context, args), delay);
   };
 }
+
+export const btnLoader = `<div class="d-flex gap-2 justify-content-center align-items-center">
+<span class="spinner-border spinner-border-sm"></span> Please wait...
+</div>`;

@@ -7,8 +7,8 @@
         @searchFunction="getLessons" />
 
       <div class="d-flex gap-3 w-100">
-        <SelectGroup selectId="sortBy" :options="sortOptions" v-model:selectValue="sortBy" @selectFunction="getLessons"
-          label="Sort By" :group="true" size="lg" />
+        <SelectBar selectId="sortBy" :options="sortOptions" v-model:selectValue="sortBy" @selectFunction="getLessons"
+          label="Sort by" :group="true" size="lg" />
 
         <button @click="toggleSortOrder" class="btn btn-lg btn-primary rounded-4" data-mdb-ripple-init>
           <i :class="`fa-solid fa-arrow-${sortOrderAsc ? 'up' : 'down'}-wide-short`"></i>
@@ -27,12 +27,12 @@
             <div class="card h-100 rounded-9 w-100 text-light bg-gradient"
               :class="[lesson.spaces == 0 || !canAddToCart(lesson) ? 'opacity-50' : 'lesson-card', `bg-${lesson.color}`]"
               @click="addToCart(lesson)" data-mdb-ripple-init :data-mdb-ripple-color="lesson.color" role="button">
-              <div class="card-body d-flex flex-column text-center gap-4 h-100">
+              <div class="card-body d-flex flex-md-column text-center gap-4 h-100">
                 <div class="my-auto lesson-image">
                   <img v-if="lesson.image" class="w-100" :src="lesson.image" :alt="lesson.subject">
                   <i v-else class="fa-duotone fa-10x fa-fw" :class="lesson.icon"></i>
                 </div>
-                <div class="d-flex flex-column gap-4">
+                <div class="my-auto d-flex flex-column gap-4">
                   <h2 class="card-title mb-0 fw-bold">{{ lesson.subject }}</h2>
                   <h4 class="card-subtitle mb-0 opacity-75 fw-semibold">AED {{ lesson.price }}</h4>
                   <div class="fs-5 card-text d-flex gap-1 flex-wrap justify-content-center">
@@ -56,8 +56,8 @@
           <PaginationWrapper v-model:pagination="pagination" label="lessons">
             <Pagination v-model:pagination="pagination" v-model:isLoading="isLoading"
               @paginationFunction="getLessons" />
-            <SelectGroup selectId="lessonsPerPage" :options="paginationOptions" v-model:selectValue="pagination.length"
-              @selectFunction="getLessons" label="lessons per page" :group="false" />
+            <SelectBar selectId="lessonsPerPage" :options="paginationOptions" v-model:selectValue="pagination.length"
+              @selectFunction="getLessons" label="Lessons per page" :group="false" />
           </PaginationWrapper>
         </div>
       </div>
@@ -71,11 +71,11 @@
 import { sendRequestToServer, notify } from '@/assets/scripts';
 import Pagination from '@/components/Pagination.vue';
 import SearchBar from '@/components/SearchBar.vue'
-import SelectGroup from '@/components/SelectBar.vue';
+import SelectBar from '@/components/SelectBar.vue';
 import PaginationWrapper from '@/components/PaginationWrapper.vue';
 
 export default {
-  components: { SearchBar, SelectGroup, Pagination, PaginationWrapper },
+  components: { SearchBar, SelectBar, Pagination, PaginationWrapper },
 
   data() {
     return {

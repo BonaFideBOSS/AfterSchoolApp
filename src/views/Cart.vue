@@ -1,7 +1,8 @@
 <template>
   <div class="container my-5">
     <h1 class="fw-bolder mb-4 text-center">My Cart</h1>
-    <div class="small d-flex flex-wrap text-nowrap justify-content-end mb-2" v-if="cart.length > 0">
+    <div class="small d-flex flex-wrap text-nowrap justify-content-center justify-content-md-end mb-2"
+      v-if="cart.length > 0">
       <RouterLink to="/" class="btn btn-link" data-mdb-ripple-init data-mdb-ripple-color="dark">
         <i class="fa-solid fa-share fa-flip-horizontal me-2"></i>
         <span>Continue shopping</span>
@@ -65,15 +66,16 @@
 
       <!-- Checkout -->
       <nav data-mdb-sidenav-init id="checkoutPage" class="sidenav py-4 w-100" data-mdb-mode="push" data-mdb-right="true"
-        data-mdb-backdrop="true">
-        <div class="container mb-4">
+        data-mdb-backdrop="true" data-mdb-scroll-container="#checkoutPageContent">
+        <div class="container">
           <button data-mdb-ripple-init data-mdb-toggle="sidenav" data-mdb-target="#checkoutPage"
-            class="btn btn-lg btn-link text-dark btn-floating">
+            class="btn btn-lg btn-secondary text-dark btn-floating">
             <i class="fa-solid fa-arrow-left"></i>
           </button>
-          <h1 class="fw-bolder mb-0 text-center">Checkout</h1>
         </div>
-        <div class="container text-center">
+        <div id="checkoutPageContent" class="container text-center mb-4 pb-4">
+          <img class="pageLogo mb-4" src="@/assets/img/bag.png" alt="checkout">
+          <h1 class="fw-bolder mb-4 text-center">Checkout</h1>
           <p class="text-muted">Please fill the checkout form.</p>
           <form @submit.prevent="submitOrder" class="offset-md-3 col-md-6 offset-lg-4 col-lg-4">
             <div class="mb-3">
@@ -102,7 +104,7 @@
 
             <button :disabled="!(user.isNameValid && user.isPhoneValid)" type="submit" class="w-100 btn btn-lg"
               data-mdb-ripple-init :class="[user.isNameValid && user.isPhoneValid ? 'btn-success' : 'btn-secondary']">
-              Checkout
+              Submit Order
             </button>
           </form>
         </div>
@@ -148,7 +150,7 @@
 </template>
 
 <script>
-import { sendRequestToServer } from '@/assets/scripts';
+import { sendRequestToServer, btnLoader } from '@/assets/scripts';
 import { RouterLink } from 'vue-router'
 export default {
   components: { RouterLink },
@@ -162,7 +164,6 @@ export default {
         phone: "",
         isNameValid: false,
         isPhoneValid: false,
-        ipAddress: "",
       },
       checkoutSuccessful: false,
       orderErrorMessage: "Order Failed!",
@@ -211,9 +212,7 @@ export default {
       const btn = event.target.querySelector('[type="submit"]');
       const btnText = btn.innerHTML;
       btn.disabled = true;
-      btn.innerHTML = `<div class="d-flex gap-2 justify-content-center align-items-center">
-                        <span class="spinner-border spinner-border-sm"></span> Please wait...
-                      </div>`;
+      btn.innerHTML = btnLoader;
       try {
         if (!(this.user.isNameValid && this.user.isPhoneValid)) {
           this.orderErrorMessage = "Username or phone is invalid.";
@@ -278,3 +277,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.pageLogo {
+  width: 150px;
+}
+</style>

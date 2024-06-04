@@ -1,5 +1,5 @@
 <template>
-  <div id="cart">
+  <div id="cart" class="d-none d-lg-block">
     <button @click="switchPage" type="button" class="btn btn-lg position-relative btn-shockwave"
       :class="[cart.length > 0 ? 'btn-primary' : 'btn-secondary', cart.length > 0 && $route.name != 'cart' ? 'is-active' : '']"
       :disabled="cart.length == 0 && $route.name != 'cart'" data-mdb-ripple-init>

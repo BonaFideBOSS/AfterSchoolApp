@@ -8,25 +8,31 @@ const router = createRouter({
       path: "/",
       name: "lessons",
       component: Lessons,
-      meta: { title: "Home" },
+      title: "Home",
+      titleShort: "Home",
+      icon: "fa-duotone fa-house",
     },
     {
       path: "/cart",
       name: "cart",
       component: () => import("@/views/Cart.vue"),
-      meta: { title: "My Cart" },
+      title: "My Cart",
+      titleShort: "Cart",
+      icon: "fa-duotone fa-cart-shopping",
     },
     {
       path: "/myorders",
       name: "myorders",
       component: () => import("@/views/MyOrders.vue"),
-      meta: { title: "My Orders" },
+      title: "My Orders",
+      titleShort: "Orders",
+      icon: "fa-duotone fa-clock-rotate-left",
     },
   ],
 });
 
 router.beforeEach((to, from, next) => {
-  var title = to.meta.title ? ` - ${to.meta.title}` : "";
+  var title = to.title ? ` - ${to.title}` : "";
   document.title = `AfterSchool${title}` || "AfterSchool";
   next();
 });

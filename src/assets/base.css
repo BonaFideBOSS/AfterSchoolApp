@@ -32,12 +32,12 @@
 
 .text-red {
   --mdb-text-opacity: 1;
-  color: rgba(220, 53, 69, var(--mdb-text-opacity)) !important;
+  color: rgba(241, 36, 56, var(--mdb-text-opacity)) !important;
 }
 
 .bg-red {
   --mdb-bg-opacity: 1;
-  background-color: rgba(220, 53, 69, var(--mdb-bg-opacity)) !important;
+  background-color: rgba(241, 36, 56, var(--mdb-bg-opacity)) !important;
 }
 
 .text-purple {
@@ -97,4 +97,9 @@
 
 body:has(.sidenav-backdrop) {
   overflow: hidden;
+}
+
+.rounded-top-9 {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem
 }
