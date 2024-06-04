@@ -5,6 +5,8 @@ var cacheFiles = [
   "img/logo-192.png",
   "img/logo-512.png",
   "img/favicon.ico",
+  "img/desktop.png",
+  "img/mobile.png",
   "mdbootstrap-7.3.0/mdb.min.css",
   "mdbootstrap-7.3.0/mdb.umd.min.js",
   "fontawesome-6.5.2/css/all.css",

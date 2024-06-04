@@ -17,5 +17,19 @@
   "id": "index.html",
   "start_url": "index.html",
   "display": "fullscreen",
-  "background_color": "#fff"
+  "background_color": "#fff",
+  "screenshots": [
+    {
+      "src": "img/desktop.png",
+      "type": "image/png",
+      "sizes": "1366x768",
+      "form_factor": "wide"
+    },
+    {
+      "src": "img/mobile.png",
+      "type": "image/png",
+      "sizes": "1442x3202",
+      "form_factor": "narrow"
+    }
+  ]
 }
