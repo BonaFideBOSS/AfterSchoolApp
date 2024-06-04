@@ -46,7 +46,7 @@ export default {
   data() {
     return {
       siteName: "AfterSchool",
-      serverURL: "http://10.63.3.106:8000/",
+      serverURL: "https://afterschoolbackend.vercel.app/",
       cart: [],
       savedLessons: []
     }
