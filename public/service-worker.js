@@ -36,20 +36,23 @@ self.addEventListener("activate", (e) => {
   e.waitUntil(self.clients.claim());
 });
 
-self.addEventListener("fetch", (e) => {
-  e.respondWith(
-    caches.match(e.request).then((r) => {
-      // Download the file if it is not in the cache,
-      return (
-        r ||
-        fetch(e.request).then(async (response) => {
-          // add the new file to cache
-          return caches.open(cacheName).then((cache) => {
-            cache.put(e.request, response.clone());
-            return response;
+self.addEventListener("fetch", (event) => {
+  if (event.request.url.startsWith(self.location.origin)) {
+    event.respondWith(
+      caches.match(event.request).then((cachedResponse) => {
+        if (cachedResponse) {
+          return cachedResponse;
+        }
+
+        return caches.open(cacheName).then((cache) => {
+          return fetch(event.request).then((response) => {
+            // Put a copy of the response in the runtime cache.
+            return cache.put(event.request, response.clone()).then(() => {
+              return response;
+            });
           });
-        })
-      );
-    })
-  );
+        });
+      })
+    );
+  }
 });
