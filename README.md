@@ -1,13 +1,13 @@
 <h1>
-  <span>AfterSchool - Web App With the MEVN Stack (SFC+PWA)</span>
   <img src="https://bonafideboss.github.io/AfterSchoolApp/img/favicon.ico" align="left"/>
+  <span>AfterSchool - Web App With the MEVN Stack (SFC+PWA)</span>
 </h1>
 
 Module: Web-Based Mobile App Development (CST3145) - Coursework 3
 
 <p>
-<img src="https://bonafideboss.github.io/AfterSchoolApp/img/desktop.png" height="250"/>
-<img src="https://bonafideboss.github.io/AfterSchoolApp/img/mobile.png" height="250"/>
+  <img src="https://bonafideboss.github.io/AfterSchoolApp/img/desktop.png" height="300"/>
+  <img src="https://bonafideboss.github.io/AfterSchoolApp/img/mobile.png" height="300"/>
 </p>
 
 ### Frontend (SFC+PWA) (v3)
