@@ -18,5 +18,5 @@ Module: Web-Based Mobile App Development (CST3145) - Coursework 3
 | | Github Repo | Live Link |
 | --- |---|---|
 | Backend<br><sup>Node.js/Express.js</sup> | https://github.com/BonaFideBOSS/AfterSchoolBackend/ | https://afterschoolbackend.vercel.app/ |
-| Frontend (v2)<br><sup>Dynamic<br>Vue.js (No SFC/PWA)</sup> | https://github.com/BonaFideBOSS/AfterSchoolFrontend/ | https://bonafideboss.github.io/AfterSchoolFrontend/ |
-| Frontend (v1)<br><sup>Static<br>Vue.js (No SFC/PWA)</sup> | https://github.com/BonaFideBOSS/AfterSchool/ | https://bonafideboss.github.io/AfterSchool/ |
+| Frontend (v2)<br><sup>Dynamic/Vue.js (No SFC/PWA)</sup> | https://github.com/BonaFideBOSS/AfterSchoolFrontend/ | https://bonafideboss.github.io/AfterSchoolFrontend/ |
+| Frontend (v1)<br><sup>Static/Vue.js (No SFC/PWA)</sup> | https://github.com/BonaFideBOSS/AfterSchool/ | https://bonafideboss.github.io/AfterSchool/ |
