@@ -6,8 +6,8 @@
 Module: Web-Based Mobile App Development (CST3145) - Coursework 3
 
 <p>
-<img src="https://bonafideboss.github.io/AfterSchoolApp/img/desktop.png" height="400"/>
-<img src="https://bonafideboss.github.io/AfterSchoolApp/img/mobile.png" height="400"/>
+<img src="https://bonafideboss.github.io/AfterSchoolApp/img/desktop.png" height="250"/>
+<img src="https://bonafideboss.github.io/AfterSchoolApp/img/mobile.png" height="250"/>
 </p>
 
 ### Frontend (SFC+PWA) (v3)
@@ -17,6 +17,6 @@ Module: Web-Based Mobile App Development (CST3145) - Coursework 3
 ### Related Links
 | | Github Repo | Live Link |
 | --- |---|---|
-| Backend<br><sup>- Node.js/Express.js</sup> | https://github.com/BonaFideBOSS/AfterSchoolBackend/ | https://afterschoolbackend.vercel.app/ |
-| Frontend (v2)<br><sup>- Dynamic<br>- Vue.js (No SFC/PWA)</sup> | https://github.com/BonaFideBOSS/AfterSchoolFrontend/ | https://bonafideboss.github.io/AfterSchoolFrontend/ |
-| Frontend (v1)<br><sup>- Static<br>- Vue.js (No SFC/PWA)</sup> | https://github.com/BonaFideBOSS/AfterSchool/ | https://bonafideboss.github.io/AfterSchool/ |
+| Backend<br><sup>Node.js/Express.js</sup> | https://github.com/BonaFideBOSS/AfterSchoolBackend/ | https://afterschoolbackend.vercel.app/ |
+| Frontend (v2)<br><sup>Dynamic<br>Vue.js (No SFC/PWA)</sup> | https://github.com/BonaFideBOSS/AfterSchoolFrontend/ | https://bonafideboss.github.io/AfterSchoolFrontend/ |
+| Frontend (v1)<br><sup>Static<br>Vue.js (No SFC/PWA)</sup> | https://github.com/BonaFideBOSS/AfterSchool/ | https://bonafideboss.github.io/AfterSchool/ |
