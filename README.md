@@ -11,8 +11,8 @@ Module: Web-Based Mobile App Development (CST3145) - Coursework 3
 </p>
 
 ### Frontend (SFC+PWA) (v3)
-- GitHub Repository: https://github.com/BonaFideBOSS/AfterSchoolFrontend/
-- GitHub Page (Live link): https://bonafideboss.github.io/AfterSchoolFrontend/
+- GitHub Repository: https://github.com/BonaFideBOSS/AfterSchoolApp/
+- GitHub Page (Live link): https://bonafideboss.github.io/AfterSchoolApp/
 
 ### Related Links
 | | Github Repo | Live Link |
