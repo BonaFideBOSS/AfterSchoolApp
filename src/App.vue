@@ -52,17 +52,17 @@ export default {
     }
   },
 
-  mounted() {
-    document.querySelectorAll('[data-mdb-ripple-init]').forEach((el) => {
-      new mdb.Ripple(el)
-    });
-  },
-
   created() {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("service-worker.js");
     }
     this.getCart()
+  },
+
+  mounted() {
+    document.querySelectorAll('[data-mdb-ripple-init]').forEach((el) => {
+      new mdb.Ripple(el)
+    });
   },
 
   methods: {

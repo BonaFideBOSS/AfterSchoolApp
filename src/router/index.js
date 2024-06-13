@@ -37,7 +37,7 @@ const router = createRouter({
       component: () => import("@/views/NotFound.vue"),
       meta: { title: "Page Not Found" },
       titleShort: "404",
-      icon: "fa-duotone fa-clock-rotate-left",
+      icon: "fa-duotone fa-ban",
       show: false,
     },
   ],
