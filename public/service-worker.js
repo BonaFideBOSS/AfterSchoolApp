@@ -58,22 +58,25 @@ self.addEventListener("activate", (e) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  if (event.request.url.startsWith(self.location.origin)) {
-    event.respondWith(
-      caches.match(event.request).then((cachedResponse) => {
-        if (cachedResponse) {
-          return cachedResponse;
-        }
+  var allowedUrls = [self.location.origin, "https://i.gyazo.com/"];
+  if (!allowedUrls.some((url) => event.request.url.startsWith(url))) {
+    return;
+  }
 
-        return caches.open(cacheName).then((cache) => {
-          return fetch(event.request).then((response) => {
-            // Put a copy of the response in the runtime cache.
-            return cache.put(event.request, response.clone()).then(() => {
-              return response;
-            });
+  event.respondWith(
+    caches.match(event.request).then((cachedResponse) => {
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+
+      return caches.open(cacheName).then((cache) => {
+        return fetch(event.request).then((response) => {
+          // Put a copy of the response in the runtime cache.
+          return cache.put(event.request, response.clone()).then(() => {
+            return response;
           });
         });
-      })
-    );
-  }
+      });
+    })
+  );
 });
