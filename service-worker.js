@@ -58,7 +58,7 @@ self.addEventListener("activate", (e) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  var allowedUrls = [self.location.origin, "https://i.gyazo.com/","https://afterschoolbackend.vercel.app/"];
+  var allowedUrls = [self.location.origin, "https://i.gyazo.com/"];
   if (!allowedUrls.some((url) => event.request.url.startsWith(url))) {
     return;
   }
